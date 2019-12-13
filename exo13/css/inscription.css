@@ -1,0 +1,47 @@
+fieldset {
+    margin: 0 50px 20px 50px;
+}
+
+
+
+.centeredFieldset {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+#fsIdentite label {
+    font-weight: bolder;
+}
+
+#fsIdentite input {
+    width: 200px;
+    display: inline-block;
+}
+
+#fsIdentite select, .radioGroup {
+    width: 205px;
+    display: inline-block;
+}
+
+#fsIdentite input[type="radio"] {
+    width: initial;
+}
+
+#fsPreferences {
+    padding: 100px 0 100px 0;
+}
+
+#buttonCouple {
+    text-align: center;
+}
+
+#recap {
+    border: 2px solid limegreen;
+    background-color: mediumseagreen;
+}

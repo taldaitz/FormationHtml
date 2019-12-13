@@ -1,0 +1,11 @@
+label {
+    font-weight: bold;
+}
+
+label:hover, .underlineHover:hover {
+    text-decoration: underline;
+}
+
+#id {
+    color : red;
+}

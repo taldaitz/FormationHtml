@@ -1,0 +1,38 @@
+#inputArea {
+    height: 200px;
+    width: 300px;
+}
+
+#outputZone {
+    min-width: 300px;
+    min-height: 200px;
+    border: 3px solid lightslategray;
+    background-color: mediumaquamarine;
+    margin: 0 70px 0 0;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+#lowHalf {
+    margin-top: 50px;
+    display: flex;
+}
+
+.hiddingButton {
+    border: 1px solid red;
+    background-color: tomato;
+    font-weight: bold;
+}
+
+.hiddingButton:hover {
+    background-color: crimson;
+}
+
+.showingButton {
+    border: 1px solid blue;
+    background-color: lightskyblue;
+}
+
+.showingButton:hover {
+    background-color: mediumturquoise;
+}

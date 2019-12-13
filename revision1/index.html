@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Révisions</title>
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <form action="traitement.php" method="POST">
+            <label>Mot de passe : </label>
+            <input type="password" name="revisionText" required/>
+            <input type="submit"/>
+
+            <div class="underlineHover"><input type="radio" name="difficulte" value="veryEasy"/>Très facile </div>
+            <div class="underlineHover"><input type="radio" name="difficulte" value="easy"/>Facile </div>
+            <div class="underlineHover"><input type="radio" name="difficulte" value="difficult"/>Difficile</div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+fieldset {
+    margin: 0 50px 20px 50px;
+}
+
+.centeredFieldset {
+    text-align: center;
+}
+
+
+
+#fsIdentite label {
+    font-weight: bolder;
+}
+
+#fsIdentite input, #fsIdentite select {
+    width: 200px;
+}
+
+#fsIdentite input[type="radio"] {
+    width: initial;
+}
+
+#fsPreferences {
+    padding: 100px 0 100px 0;
+}
+
+#buttonCouple {
+    text-align: center;
+}

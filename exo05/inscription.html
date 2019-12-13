@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inscription</title>
+</head>
+
+<body>
+
+    <form action="traitement.php" method="POST">
+        <fieldset>
+            <legend>Identité</legend>
+
+            <table>
+                <tr>
+                    <td><label for="nom">Nom : </label></td>
+                    <td><input type="text" name="nom" id="nom" required /></td>
+
+                    <td><label for="prenom">Prénom : </label></td>
+                    <td><input type="text" name="prenom" id="prenom" required /></td>
+                </tr>
+
+                <tr>
+                    <td><label>Date Naissance : </label></td>
+                    <td><input type="date" name="dateNaissance" /></td>
+
+                    <td><label>Civilité : </label></td>
+                    <td>
+                        <input type="radio" name="civilite" value="mr" /> Mr
+                        <input type="radio" name="civilite" value="mme" /> Mme
+                        <input type="radio" name="civilite" value="mlle" /> Mlle
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Code Postal : </label></td>
+                    <td><input type="number" name="codePostal" min="0" /></td>
+
+                    <td><label>Ville : </label></td>
+                    <td>
+                        <input name="ville" list="listVille" />
+                        <datalist id="listVille">
+                            <option value="Lyon"></option>
+                            <option value="Paris"></option>
+                            <option value="Toulouse"></option>
+                            <option value="Strasbourg"></option>
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Pays : </label></td>
+                    <td>
+                        <select name="pays">
+                            <option value="ger">Allemagne</option>
+                            <option value="fr" selected>France</option>
+                            <option value="uk">Royaume-Uni</option>
+                            <option value="es">Espagne</option>
+                        </select>
+                    </td>
+
+                    <td><label>Tel : </label></td>
+                    <td><input type="tel" name="phone"/></td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Authentification</legend>
+            <table>
+                <tr>
+                    <td><label>Email : </label></td>
+                    <td><input type="email" name="email"/></td>
+
+                    <td><label>Mot de passe : </label></td>
+                    <td><input type="password" name="mdp"/></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Préférences</legend>
+            <input type="checkbox" name="pref1"> Licorne réaliste
+            <input type="checkbox" name="pref2"> Licorne dessinné
+            <input type="checkbox" name="pref3"> Licorne déguisement
+
+            <br/>
+            <br/>
+
+            <label>Préférences de contact : </label>
+            <select name="prefContact[]" multiple>
+                <option value="tel">Téléphone</option>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+            </select>
+        </fieldset>
+
+        <br />
+        <br />
+
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="R.A.Z." />
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+header h1 {
+    font-size: 32pt;
+    word-spacing: 50px;
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+
+nav ul a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+footer table {
+    color: white;
+}
+
+footer cite {
+    color: green;
+    background-color: yellow;
+}
+

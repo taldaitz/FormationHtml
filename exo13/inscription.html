@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/inscription.css" />
+    <script src="js/fonction.js"></script>
+</head>
+
+<body>
+
+    <form action="traitement.php" method="POST">
+        <fieldset id="fsIdentite" class="centeredFieldset">
+            <legend>Identité</legend>
+
+            <p>
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom" required onchange="signalChange(id);"/>
+            </p>
+
+            <p>
+                <label for="prenom">Prénom : </label>
+                <input type="text" name="prenom" id="prenom" required onchange="signalChange(id);"/>
+            </p>
+
+            <p>
+                <label>Date Naissance : </label>
+                <input type="date" id="datenaissance" name="dateNaissance" onchange="signalChange(id);"/>
+            </p>
+            <div>
+                <label>Civilité : </label>
+
+                <div class="radioGroup">
+                    <input type="radio" name="civilite" id="civ1" value="mr" onchange="signalChange(id);"/> Mr
+                    <input type="radio" name="civilite" id="civ2" value="mme" onchange="signalChange(id);"/> Mme
+                    <input type="radio" name="civilite" id="civ3" value="mlle" onchange="signalChange(id);"/> Mlle
+                </div>
+
+            </div>
+            <p>
+                <label>Code Postal : </label>
+                <input type="number" name="codePostal" min="0" />
+            </p>
+            <p>
+
+                <label>Ville : </label>
+
+                <input name="ville" list="listVille" />
+                <datalist id="listVille">
+                    <option value="Lyon"></option>
+                    <option value="Paris"></option>
+                    <option value="Toulouse"></option>
+                    <option value="Strasbourg"></option>
+                </datalist>
+
+            </p>
+
+            <p>
+
+                <label>Pays : </label>
+
+                <select name="pays" id="pays" onchange="signalChange(id);">
+                    <option value="ger">Allemagne</option>
+                    <option value="fr" selected>France</option>
+                    <option value="uk">Royaume-Uni</option>
+                    <option value="es">Espagne</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Tel : </label>
+                <input type="tel" name="phone" />
+            </p>
+
+        </fieldset>
+
+        <p id="recap">
+            Nom : <label id="labnom"></label> Prenom : <label id="labprenom"></label><br/>
+            Date Naissance : <label id="labdatenaissance"></label> Civilité : <label id="labcivilite"></label><br/>
+            Pays : <label id="labpays"></label> <br/>
+        </p>
+
+        <fieldset id="fsAuthentification" class="centeredFieldset">
+            <legend>Authentification</legend>
+            <p>
+                <label>Email : </label>
+                <input type="email" name="email" onchange="signalChange('email');"/>
+
+                <label>Mot de passe : </label>
+                <input type="password" name="mdp" onchange="signalChange('password');"/>
+            </p>
+
+        </fieldset>
+
+        <fieldset id="fsPreferences">
+            <legend>Préférences</legend>
+            <input type="checkbox" name="pref1"> Licorne réaliste
+            <input type="checkbox" name="pref2"> Licorne dessinné
+            <input type="checkbox" name="pref3"> Licorne déguisement
+
+            <br />
+            <br />
+
+            <label>Préférences de contact : </label>
+            <select name="prefContact[]" multiple>
+                <option value="tel">Téléphone</option>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+            </select>
+        </fieldset>
+
+        <br />
+        <br />
+        <p id="buttonCouple">
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="R.A.Z." />
+        </p>
+    </form>
+
+</body>
+
+</html>
